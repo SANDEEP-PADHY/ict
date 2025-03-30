@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="/CSS/Card.css">
     <link rel="stylesheet" href="/CSS/Header.css">
-    
+    <link rel="stylesheet" href="/CSS/th.css">
     <style>
         /* Modal Styling */
        
@@ -17,76 +17,62 @@
 </head>
 <body>
 
-    <div id="header"></div>
+    <div id="header" style="padding-top: 80px;;"></div>
+    <table>
+        <tr>
+            <th>Project</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Rain Detector</td>
+            <td>Contact for price</td>
+        </tr>
+        <tr>
+            <td>Obstacle Detector</td>
+            <td>Contact for price</td>
+        </tr>
+        <tr>
+            <td>Motion Detector</td>
+            <td>Contact for price</td>
+        </tr>
+        <tr>
+            <td>Fire Detector</td>
+            <td>Contact for price</td>
+        </tr>
+        <tr>
+            <td>Distance Measurement</td>
+            <td>Contact for price</td>
+        </tr>
+        <tr>
+            <td>Automatic Street Light</td>
+            <td>Contact for price</td>
+        </tr>
+        <tr>
+            <td>Humidity and Temperature Sensor</td>
+            <td>Contact for price</td>
+        </tr>
+        <tr>
+            <td>Soil Moisture Sensor</td>
+            <td>Contact for price</td>
+        </tr>
+        <tr>
+            <td>LED Light Chaser</td>
+            <td>Contact for price</td>
+        </tr>
+        <tr>
+            <td>Traffic Light</td>
+            <td>Contact for price</td>
+        </tr>
+        <tr>
+            <td>Custom Project</td>
+            <td>xyz</td>
+        </tr>
+    </table>
+    <a href="https://wa.me/919664650235" style="text-decoration: none; text-align: center;" ><h2>click here to contact</h2></a>
+    
     <!-- Image Modal -->
-    <div id="imageModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-            <img id="modalImg" src="" alt="Large View">
-        </div>
-    </div>
-
-    <section style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 80px;">
-        <div class="wrapper" id="productContainer"></div>
-        
-    </section>
+    
     <hr style="border: var(--primary-color) 1px solid;width:94% ;">
-    
-    <script>
-        // Generate image paths dynamically from A60001 to A60145
-        const images = [];
-        for (let i = 1; i <= 180; i++) {
-            let imageNumber = String(i).padStart(3, '0');
-            images.push(`/Media/Posters/A5 Genzsy/A50${imageNumber}.jpg`);
-        }
-    
-        const container = document.getElementById("productContainer");
-    
-        function checkImageExists(src, callback) {
-            const img = new Image();
-            img.onload = () => callback(true, src);
-            img.onerror = () => callback(false, src);
-            img.src = src;
-        }
-    
-        images.forEach(imageSrc => {
-            checkImageExists(imageSrc, (exists, validSrc) => {
-                if (exists) {
-                    const productCard = `
-                        <div class="h-card">
-                            <div class="img-area" onclick="openModal('${validSrc}')">
-                                <img src="${validSrc}" alt="Product Image">
-                            </div>
-                            <div class="info">
-                                <p class="price">₹39/-</p>
-                            </div>
-                            <div class="info">
-                                <button class="buy" onclick="window.location.href='4_cart.html'">Buy Now</button>
-                            </div>    
-                        </div>
-                    `;
-                    container.insertAdjacentHTML("beforeend", productCard);
-                }
-            });
-        });
-    
-        function openModal(imgSrc) {
-            document.getElementById("modalImg").src = imgSrc;
-            document.getElementById("imageModal").style.display = "flex";
-        }
-    
-        function closeModal() {
-            document.getElementById("imageModal").style.display = "none";
-        }
-    
-        // Close modal on ESC key
-        document.addEventListener("keydown", function(event) {
-            if (event.key === "Escape") {
-                closeModal();
-            }
-        });
-    </script>
-
 <div id="footer"></div>
 
 <script>
